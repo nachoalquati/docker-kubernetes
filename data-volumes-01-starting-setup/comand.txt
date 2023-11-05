@@ -1,1 +1,1 @@
-docker run -d -p 3000:80 --rm --name fapp -v feedback:/app/feedback -v "C:\Users\nacho\Desktop\Cursos\Docker-Kubernetes\data-volumes-01-starting-setup:/app" -v /app/node_modules nodeapp
+docker run -d -p 3000:80 --rm --name fapp -v feedback:/app/feedback -v "C:\Users\nacho\Desktop\Cursos\Docker-Kubernetes\data-volumes-01-starting-setup:/app:ro" -v /app/temp -v /app/node_modules nodeapp
