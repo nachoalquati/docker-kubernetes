@@ -1,0 +1,4 @@
+1- CREATE NETWORK: docker network create fav-network
+2- BUILD IMAGE: docker build -t favapp .
+3- RUN MONGODB IMAGE: docker run -d --name mongodb --network fav-network mongo
+4- RUN NODE APP IMAGE: docker run -d --name fapp -p 3000:3000 --network fav-network --rm favapp
