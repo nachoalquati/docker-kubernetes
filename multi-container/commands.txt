@@ -1,0 +1,3 @@
+Backend: docker run -p 80:80 --name backend --network goals-net --rm -d goals-backend
+Frontend: docker run -p 3000:3000 --rm --name frontend -it   goals-frontend
+DB: docker run --name mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=nacho -e MONGO_INITDB_ROOT_PASSWORD=pass mongo
