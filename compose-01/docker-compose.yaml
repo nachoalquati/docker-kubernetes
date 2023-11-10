@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  backend:
+    
+  frontend:
+
+  mongodb:
+    image: 'mongo'
+    volumes:
+      - data:/data/db
+    # environment:
+    #   - MONGODB_USERNAME=max
+    #   - MONGODB_PASSWORD=secret
+    env_file:
+      - ./env/mongo.env
+volumes:
+  data:
+
+# No necesito network porque docker compose crea una con todos los 
+# contenedores  por default.
