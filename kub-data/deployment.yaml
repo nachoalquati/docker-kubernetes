@@ -1,0 +1,17 @@
+apiVersion: app/v1
+king: Deployment
+metadata:
+  name: story-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: story
+  template:
+    metadata:
+      labels:
+        app: story
+    spec:
+      containers:
+        - name: story
+          image: ignacioalquati/kub-data-demo
